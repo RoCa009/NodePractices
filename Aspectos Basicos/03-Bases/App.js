@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 
-const base = 7;
+const base = 6;
 
 let salida = '';
 
