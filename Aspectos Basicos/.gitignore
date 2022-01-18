@@ -1,2 +1,5 @@
 #Ignorar los archivos .txt generados
 *.txt
+
+#Ignorar Node_modules
+node_modules
