@@ -1,11 +1,29 @@
-
+const { boolean } = require('yargs');
 const { crearArchivoMultiplicacion } = require ('./Helpers/Multiplicar');
-const arg = require('yargs').argv;
+const argv = require('yargs')
+    .option('b', {
+        alias: 'base',
+        type: 'number',
+        demandOption: true
+    })
+    .option('l',{
+        alias: 'lista',
+        type: 'boolean',
+        demandOption: true,
+        default: false
+    })
+    .check( (argv, options) => {
+        if( isNaN(argv.b, argv.l) ){
+            throw 'La base debe de ser un numero solamente'
+        }
+        return true;
+    })
+    .argv;
 
-console.log(base)
+console.clear();    
 
-//const base = 1;
+console.log(argv)    
 
-crearArchivoMultiplicacion(base)
-    .then (nombreArchivo => console.log(nombreArchivo, 'Creado'))
+crearArchivoMultiplicacion(argv.b)
+    .then (nombreArchivo => console.log(nombreArchivo, 'con exito'))
     .catch (err => console.log(err))
