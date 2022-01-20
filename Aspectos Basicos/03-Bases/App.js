@@ -5,6 +5,6 @@ require('colors');
 
 console.clear();    
 
-crearArchivoMultiplicacion(argv.b, argv.l)
+crearArchivoMultiplicacion(argv.b, argv.l, argv.h)
     .then (nombreArchivo => console.log(nombreArchivo.rainbow, 'con exito'))
     .catch (err => console.log(err))

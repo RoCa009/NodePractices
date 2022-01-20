@@ -1,6 +1,6 @@
 {
   "name": "03-bases",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Tabla de multiplcar con archivo de texto",
   "main": "App.js",
   "scripts": {

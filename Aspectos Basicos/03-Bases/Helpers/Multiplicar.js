@@ -1,17 +1,18 @@
 const fs = require('fs');
 const colors = require('colors');
-const crearArchivoMultiplicacion = async (base = 5, lista = false) =>{
+const crearArchivoMultiplicacion = async (base = 5, lista = false, hasta = 10) =>{
 
     try {
-        let salida = '';
+        let salida, consola = '';
 
-        for (let i = 1; i<=10; i++){
-        salida += `${base} ${'X'.green} ${i} ${'='.red} ${base*i}\n`;
+        for (let i = 1; i<=hasta; i++){
+        salida += `${base} X ${i} = ${base*i}\n`;
+        consola += `${base} ${'X'.green} ${i} ${'='.red} ${base*i}\n`;
         }
 
         if (lista){
             console.log(`Tabla del: `, colors.blue(base))
-            console.log(salida);
+            console.log(consola);
         }
     
         
