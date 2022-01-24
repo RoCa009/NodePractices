@@ -1,3 +1,6 @@
 #Ignorar llaves ssh
 nodekey
 nodekey.pub
+
+#Ignorar el node_modules
+node_modules/
