@@ -50,5 +50,6 @@ const pausa = () => {
 }
 
 module.exports = {
-    mostrarMenu
+    mostrarMenu,
+    pausa
 }
