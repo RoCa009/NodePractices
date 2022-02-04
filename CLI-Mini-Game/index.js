@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-
 //  ________                  ________      
 // /$$$$$$$$|                /$$$$$$$/   
 // | $$___ $|     _____     / $$/        
@@ -12,7 +11,6 @@
 // |__/     |$| \______/    \ $$\      |$$    $$|
 // /*      |$                \ $$$$$$/ 
 // */                        
-
 
 import chalk from 'chalk';
 import inquirer from 'inquirer';
@@ -34,13 +32,13 @@ async function welcome() {
   rainbowTitle.stop();
 
   console.log(`
-    ${chalk.green('COMO JUGAR :>')} 
+    ${chalk.blue('COMO JUGAR :>')} 
     En realidad soy un proceso en la compu.
 
     Es por eso y porque no me hicieron con un manejo de una excepcion en particular que ante 
     la primera falla voy a ser... ${chalk.bgRed('TERMINADO')}
     
-    Yep... no do-overs, besides... ${chalk.bgBlack('San Google no se puede usar >:}')} 
+    Yep... no do-overs, besides... ${chalk.bgBlack.red('San Google no se puede usar >:}')} 
   `);
 }
 
@@ -112,22 +110,12 @@ async function question1() {
     ],
   });
 
-  /*if(answers.question_1 === 'Dec 4, 1995'){
-      return handleAnswer
-  }if(answers.question_1 === 'Dec 10, 2001'){
-      return handleEasterEgg
-  }else{
-      return handleAnswer
-  }*/
-
   if(answers.question_1 === 'Dec 10, 2001'){
     return handleEasterEgg();
   }else{
     return handleAnswer(answers.question_1 === 'Dec 4, 1995');
   }
 
-  //return handleAnswer(answers.question_1 === 'Dec 4, 1995');
-  //return handleEasterEgg(answers.question_1 === 'Dec 10, 2001');
 }
 
 async function question2() {
@@ -180,7 +168,7 @@ async function question5() {
   return handleAnswer(answers.question_5 === 'non-blocking');
 }
 
-// Hice uso de  top-level await
+// Hice uso de  top-level await para aprender algo nuevo y facilitarme la vida jaja
 console.clear();
 await welcome();
 await askName();
