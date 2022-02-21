@@ -7,34 +7,20 @@ const preguntas = [
         name: 'opcion',
         message: 'Que desea hacer?',
         choices: [
+
             {
-                value: '1',
-                name: `${'1.'.green} Crear tarea`
+                value: 1,
+                name: `${'1.'.green} Buscar ciudad`
             },
             {
-                value: '2',
-                name: `${'2.'.green} Listar tareas`
+                value: 2,
+                name: `${'2.'.green} Historial de busqueda`
             },
             {
-                value: '3',
-                name: `${'3.'.green} Listar tareas completadas`
-            },
-            {
-                value: '4',
-                name: `${'4.'.green} Listar tareas pendientes`
-            },
-            {
-                value: '5',
-                name: `${'5'.green} Completar tarea(s)`
-            },
-            {
-                value: '6',
-                name: `${'6.'.green} Borrar tarea`
-            },
-            {
-                value: '0',
-                name: `${'0'.red} Salir`
+                value: 3,
+                name: `${'3.'.green} Salir`
             }
+            
         ]
     }
 ];
