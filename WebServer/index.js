@@ -1,8 +1,12 @@
 const express = require('express');
+const hbs = require('hbs');
+
 const app = express();
 const Port = 8080;
 
-app.set('view engine', 'hbs')
+//Handlebars
+app.set('view engine', 'hbs');
+hbs.registerPartials( __dirname + '/views/Partials', function(){})
 
 //Servir contenido estatico
 app.use(express.static('Public'));
