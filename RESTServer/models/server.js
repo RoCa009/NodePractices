@@ -23,7 +23,7 @@ class Server {
     }
 
     routes(){
-        this.app.get('/', (req, res)=>res.send('Hello there!'));
+        this.app.get('/salute', (req, res)=>res.send('Hello there!')); //Endpoint llamado salute
     }
 
     listen(){
