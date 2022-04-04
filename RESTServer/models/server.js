@@ -1,5 +1,6 @@
 //Hacemos uso de express
 const express = require('express');
+const cors = require('cors');
 
 //Creamos la clase Server
 class Server {
@@ -18,12 +19,15 @@ class Server {
     }
 
     middlewares(){
+        //CORS
+        this.app.use( cors() );
+
         //Directorio public
-        this.app.use(express.static('public'))
+        this.app.use(express.static('public'));
     }
 
     routes(){
-        this.app.get('/salute', (req, res)=>res.send('Hello there!')); //Endpoint llamado salute
+        this.app.use('/api/users', require('../routes/user'));
     }
 
     listen(){
@@ -32,5 +36,4 @@ class Server {
     }
 }
 
-//Exportamos la clase
 module.exports = Server
